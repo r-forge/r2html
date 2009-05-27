@@ -4225,7 +4225,7 @@ else	{
                 openSinput <- FALSE
             }
             if (options$results=="Robj") HTML(err$value, file=chunkout, append=TRUE)
-            if (options$results=="html") cat(err$value, file=chunkout, append=TRUE)
+            if (options$results=="html") cat(err$value, file=chunkout, append=TRUE, sep = "\n")
             remove(output)
 
         }
@@ -4387,47 +4387,4 @@ SweaveSyntaxHTML$trans$docexpr <- "<[/]?Sexpr\\1>"
 SweaveSyntaxHTML$trans$syntaxname <- "<!--SweaveSyntax{SweaveSyntaxHTML}!-->"
 
 #----------------------------------------------------------------------------------------------------#
-
-
-"myunzip"   <-  function (zipname, dest) 
-{
-    if (file.exists(zipname)) {
-      if (.Platform$OS.type=="unix")  system(paste(getOption("unzip"), "-oq", zipname, "-d", dest)) 
-      else .Internal(int.unzip(zipname, NULL, dest))
-    }
-    else stop(paste("zipfile", zipname, "not found"))
-}
-
-".onLoad" <- function(lib,pkg)
-{
-	#cat("\nLoading R2HTML package...\n")
-	#ps.options(bg="white")
-  
-  # Copy all the content of "output" directory to tempdir()
-  # now we use a zip file as there are subdirectories...
-   myunzip(file.path(lib,pkg,'output','R2HTMLstuff.zip'),dest=tempdir())
-
-	# PhG: eliminated! No temp variables in .GlobalEnv, please    assign(".R2HTMLpath",file.path(lib,pkg),pos=.GlobalEnv)
-	# EL: now can use getOption("R2HTML.CSSdir")
-	options(R2HTML.CSSdir=file.path(lib,pkg,"output"))
-  options(R2HTML.sortableDF=FALSE)
-  options(R2HTML.format.digits=2)
-  options(R2HTML.format.nsmall=0)
-  options(R2HTML.format.big.mark="")
-  options(R2HTML.format.big.interval=3)
-  options(R2HTML.format.decimal.mark=Sys.localeconv()[["decimal_point"]])
-  options(R2HTML.grid.first=TRUE)
-  options(R2HTML.grid.stuffbasepath="./")
-
-}
-
-
-options(R2HTML.sortableDF=FALSE)
-options(R2HTML.format.digits=2)
-options(R2HTML.format.nsmall=0)
-options(R2HTML.format.big.mark="")
-options(R2HTML.format.big.interval=3)
-options(R2HTML.format.decimal.mark=Sys.localeconv()[["decimal_point"]])
-options(R2HTML.grid.first=TRUE)
-options(R2HTML.grid.stuffbasepath="./")
 
