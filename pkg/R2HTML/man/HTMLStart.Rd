@@ -18,7 +18,7 @@ HTMLStop()
   \item{filename}{ name of the target HTML main file }
   \item{extension}{ extension of the target HTML file (htm, html,...) }
   \item{echo}{ should the parsed commands be written in the output? [boolean] }
-  \item{autobrowse} {should the browser be invoked each time a command is issued? [boolean] }
+  \item{autobrowse}{should the browser be invoked each time a command is issued? [boolean] }
   \item{HTMLframe}{ should the output have a HTML frame structure? [boolean]}
   \item{withprompt}{ prompt to display while using HTMLStart/HTMLStop}
   \item{CSSFile}{ path and name of a CSS file to use }
