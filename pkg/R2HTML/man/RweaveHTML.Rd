@@ -14,7 +14,7 @@
 \usage{
 RweaveHTML()
 }
-%- maybe also 'usage' for other objects documented here.
+
 \details{
 }
 \value{
@@ -31,7 +31,6 @@ In order to work properly, noweb codes have to be located at the beginning of a 
 \examples{
 
 \dontrun{
-library(tools)
 Sweave("file.snw",driver=RweaveHTML)
 }
 }
