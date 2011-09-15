@@ -2,7 +2,7 @@ citHeader("To cite R2HTML in publications use:")
 
 citEntry(entry = "Article",
          title = "The {R2HTML} Package",
-         author = person(first="Eric",last="Lecoutre",email="lecoutre@stat.ucl.ac.be"),
+         author = person(first="Eric",last="Lecoutre",email="ericlecoutre@gmail.com"),
          journal = "R News",
 	 year = "2003",
          volume = "3",
