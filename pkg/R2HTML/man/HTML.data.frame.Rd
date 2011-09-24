@@ -42,7 +42,7 @@
 
 	Some options are used to pass default values.
 	You can see those options with (by example): 
-\code{getOption("R2HTML.format.decimal.mark")} and \code{options("R2HTML.format.decimal.mark"=",")}
+	\code{getOption("R2HTML.format.decimal.mark")} and {options("R2HTML.format.decimal.mark"=",")}
 	
 	Sortable data.frame uses a DHTML behavior, as explained and shown in \url{http://goblet.molgen.mpg.de/moz-behaviors-example/findex.html}. This requires the file \file{tablesort.htc} which comes with \pkg{R2THML} to be placed in the same directory than the output. This functionality only works for HTML files located on a web server (not on local computer).
 	
