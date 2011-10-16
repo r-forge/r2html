@@ -20,9 +20,6 @@ HTMLCSS(file = get(".HTML.file"), append = TRUE, CSSfile = "R2HTML.css")
 }
 \references{ For information about CSS, have a look at W3 web site http://www.w3.org/Style/CSS/ }
 \author{ Eric Lecoutre }
-\note{ }
-
- 
 
 \examples{
 myfile <- file.path(tempdir(),"tmp.html")

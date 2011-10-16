@@ -1,6 +1,5 @@
 \name{HTMLstem}
 \alias{HTMLstem}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{Insert a stem-and-leaf plot in the HTML output}
 \description{
   Insert a stem-and-leaf plot in the HTML output.
@@ -8,7 +7,7 @@
 \usage{
 HTMLstem(x, file = get(".HTML.file"), append = TRUE, ...)
 }
-%- maybe also 'usage' for other objects documented here.
+
 \arguments{
   \item{x}{  a numeric vector.}
   \item{file}{ the target HTML file  }

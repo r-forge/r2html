@@ -7,8 +7,9 @@
   A title is a string with the S3 class "title". The function \code{as.title} gives this class to an object, so that title method of HTML could apply to it.
 }
 \usage{
-HTML.title(x, HR = 2, CSSclass=NULL,file = get(".HTML.file"),append=TRUE,...)
-as.title(x)
+\method{HTML}{title}(x, HR = 2, CSSclass=NULL, file = get(".HTML.file"),
+  append=TRUE, ...)
+  as.title(x)
 }
 
 \arguments{
@@ -19,12 +20,12 @@ as.title(x)
   \item{append}{ logical. If 'TRUE' output will be appended to 'file'; otherwise, it will overwrite the contents of 'file'}
   \item{\dots}{ ... }
 }
-\details{
-}
+
 \value{
-	no value returned.  
+  \item{HTML.title}{ Called for its side effect of printing output (via \code{cat}) }
+  \item{as.title}{ Returns its input converted to character as class \dQuote{title} }
 }
-\references{  }
+
 \author{ Eric Lecoutre }
 
 \note{ For a discussion about .HTML.file default value for file argument, refer to \code{\link{HTMLStart}} }
@@ -43,7 +44,6 @@ HTML(tit1, file=myfile)
 
 HTML.title("This is method 2",file=myfile, HR=3)
 cat("\n Test output written in: ",myfile)
-
 
 }
 \keyword{ print }

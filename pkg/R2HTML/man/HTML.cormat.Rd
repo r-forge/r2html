@@ -3,14 +3,14 @@
 
 \title{ Write a correlation matrix with HTML formatting }
 \description{
-  Although the class \sQuote{cormat} is not defined, the function is called to \code{HTML.cormat}, to highlight the fact it should be called only with a correlation matrix. 
+  Although the class \sQuote{cormat} is not defined, the function is called \code{HTML.cormat}, to highlight the fact it should be called only with a correlation matrix.
 }
-\synopsis{
-HTML.cormat(x, file = get(".HTML.file"), digits = 2, append = TRUE, align = "center", caption = "", captionalign = "bottom", classcaption = "captiondataframe", classtable = "cormat", useCSS = TRUE, ...)
-}
+
 \usage{
-HTML.cormat(x,file=)
-HTML.cormat(x, file = get(".HTML.file"), digits = 2, append = TRUE, align = "center", caption = "", captionalign = "bottom", classcaption = "captiondataframe", classtable = "cormat", useCSS = TRUE, ...)
+  HTML.cormat(x, file = get(".HTML.file"), digits = 2, append = TRUE,
+    align = "center", caption = "", captionalign = "bottom",
+    classcaption = "captiondataframe", classtable = "cormat",
+    useCSS = TRUE, ...)
 }
 
 \arguments{
@@ -24,8 +24,16 @@ HTML.cormat(x, file = get(".HTML.file"), digits = 2, append = TRUE, align = "cen
   \item{classcaption}{ CSS class to use for caption}
   \item{classtable}{ CSS class to be used for the whole table (in html <table> statement)}
   \item{useCSS}{ whether to use CSS or not for traffic highlighting}
-  \item{\dots}{ ... }
+  \item{\dots}{ ... } additional arguments passed to \code{cat}.
 }
+
+\details{
+  Arguments have sensible defaults, so typical usage is:
+  \preformatted{
+    HTML.cormat(x, file=)
+  }
+}
+
 \value{
 	returns (invisibly) the input
 }

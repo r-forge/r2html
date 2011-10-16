@@ -6,7 +6,10 @@
 \description{   Internal R2HTML functions}
 \usage{
 HTMLReplaceNA(Vec, Replace = " ")
-HTMLCommand(x, file = get(".HTML.file"), Num = "", menu = FALSE, target= "index<-main.html", append = TRUE, ...)
+
+HTMLCommand(x, file = get(".HTML.file"), Num = "", menu = FALSE,
+  target= "index<-main.html", append = TRUE, ...)
+
 HTMLcode(x,...)
 }
 \arguments{
@@ -23,7 +26,5 @@ HTMLcode(x,...)
 \details{
      These are not to be called by the user.
 }
-\examples{
 
-}
 \keyword{misc}

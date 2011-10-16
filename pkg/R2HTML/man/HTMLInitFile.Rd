@@ -8,11 +8,12 @@
 }
 
 \usage{
-HTMLInitFile(outdir = tempdir(),filename="index",extension="html",HTMLframe=FALSE, BackGroundColor = "FFFFFF", BackGroundImg = "", Title = "R output",CSSFile="R2HTML.css",useLaTeX=TRUE,useGrid=TRUE)
+HTMLInitFile(outdir = tempdir(), filename="index", extension="html",
+  HTMLframe=FALSE, BackGroundColor = "FFFFFF", BackGroundImg = "",
+  Title = "R output", CSSFile="R2HTML.css", useLaTeX=TRUE, useGrid=TRUE)
+
 HTMLEndFile(file = get(".HTML.file"))
 }
-
-
 
 \arguments{
   \item{outdir}{ directory to store the output }
@@ -27,13 +28,11 @@ HTMLEndFile(file = get(".HTML.file"))
   \item{useGrid}{ boolean - add required references to javascript grid in order to use R2HTML grid fonctions}
   \item{file}{target HTML file to end}
 }
-\details{
-}
 
 \value{
 	physical path of the main HTML file that will serve for the report.
 }
-\references{ }
+
 \author{ Eric Lecoutre }
 
 \note{ For a discussion about .HTML.file default value for file argument, refer to \code{\link{HTMLStart}} }

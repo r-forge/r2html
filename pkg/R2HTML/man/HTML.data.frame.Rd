@@ -5,9 +5,21 @@
 \description{
   This function exports a data.frame to a HTML file. Many arguments allow to customize the layout of the HTML table.
 }
-\synopsis{HTML.data.frame(x, file = get(".HTML.file"), Border = 1, innerBorder = 0, classfirstline = "firstline", classfirstcolumn = "firstcolumn", classcellinside = "cellinside",  append=TRUE,align="center",caption="",captionalign="bottom",classcaption="captiondataframe",classtable="dataframe",digits=getOption("R2HTML.format.digits"),nsmall = getOption("R2HTML.format.nsmall"), big.mark = getOption("R2HTML.format.big.mark"), big.interval = getOption("R2HTML.format.big.interval"), decimal.mark = getOption("R2HTML.format.decimal.mark"),sortableDF=getOption("R2HTML.sortableDF"),row.names = TRUE,...)
-}
-\usage{\method{HTML}{data.frame}(x, file = get(".HTML.file"), Border = 1, innerBorder=0,classfirstline = "firstline", classfirstcolumn = "firstcolumn", classcellinside = "cellinside", append = TRUE, align = "center", caption = "", captionalign = "bottom", classcaption = "captiondataframe", classtable = "dataframe", digits=2,nsmall = 0, big.mark = "", big.interval = 3, decimal.mark = ",",sortableDF=FALSE, row.names = TRUE,...)
+
+\usage{
+  \method{HTML}{data.frame}(x, file = get(".HTML.file"), Border = 1,
+    innerBorder = 0, classfirstline = "firstline",
+    classfirstcolumn = "firstcolumn", classcellinside = "cellinside",
+    append=TRUE, align="center", caption="",
+    captionalign="bottom", classcaption="captiondataframe",
+    classtable="dataframe",
+    digits=getOption("R2HTML.format.digits"),
+    nsmall = getOption("R2HTML.format.nsmall"),
+    big.mark = getOption("R2HTML.format.big.mark"),
+    big.interval = getOption("R2HTML.format.big.interval"),
+    decimal.mark = getOption("R2HTML.format.decimal.mark"),
+    sortableDF=getOption("R2HTML.sortableDF"),
+    row.names = TRUE, ...)
 }
 
 \arguments{
@@ -45,16 +57,25 @@
 	\code{getOption("R2HTML.format.decimal.mark")} and {options("R2HTML.format.decimal.mark"=",")}
 	
 	Sortable data.frame uses a DHTML behavior, as explained and shown in \url{http://goblet.molgen.mpg.de/moz-behaviors-example/findex.html}. This requires the file \file{tablesort.htc} which comes with \pkg{R2THML} to be placed in the same directory than the output. This functionality only works for HTML files located on a web server (not on local computer).
-	
 
+  Typical usage is:
+  \preformatted{
+  HTML.data.frame(x, file = get(".HTML.file"), Border = 1,
+    innerBorder=0, classfirstline = "firstline",
+    classfirstcolumn = "firstcolumn", classcellinside = "cellinside",
+    append = TRUE, align = "center", caption = "",
+    captionalign = "bottom", classcaption = "captiondataframe",
+    classtable = "dataframe", digits=2, nsmall = 0, big.mark = "",
+    big.interval = 3, decimal.mark = ",",
+    sortableDF=FALSE, row.names = TRUE, ...)
+  }
 }
+
 \value{
 	no value returned.  
 }
 
 \author{ Eric Lecoutre}
-
-
 
 
 \seealso{ \code{\link{HTML}}}

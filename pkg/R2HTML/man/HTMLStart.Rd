@@ -8,10 +8,13 @@
  }
 
 \usage{
-HTMLStart(outdir = tempdir(), filename = "index", extension = "html", echo = FALSE, autobrowse = FALSE, HTMLframe = TRUE, withprompt = "HTML> ", CSSFile = "R2HTML.css", BackGroundColor = "FFFFFF", BackGroundImg = "", Title = "R output") 
+HTMLStart(outdir = tempdir(), filename = "index", extension = "html",
+  echo = FALSE, autobrowse = FALSE, HTMLframe = TRUE, withprompt = "HTML> ",
+  CSSFile = "R2HTML.css", BackGroundColor = "FFFFFF", BackGroundImg = "",
+  Title = "R output")
+
 HTMLStop()
 }
-
 
 \arguments{
   \item{outdir}{physical directory to store the output }
@@ -43,7 +46,7 @@ The user may need to know the following points which describe how R2HTML does wo
 \value{
 	no useful output is returned.
 }
-\references{ }
+
 \author{ Eric Lecoutre }
 
 \note{ The argument \code{echo} is very usefull for teaching purposes.}
@@ -58,8 +61,8 @@ dir.create(file.path(tempdir(),"R2HTML"))
 HTMLStart(file.path(tempdir(),"R2HTML"),HTMLframe=FALSE, Title="My report",autobrowse=FALSE)
 as.title("This is my first title")
 x <- 1
-y<- 2
-x+y
+y <- 2
+x + y
 HTMLStop()
 
 
@@ -70,7 +73,7 @@ if (interactive()){
 	as.title("Manipulation vectors")
 	1:10
 	sum(1:10)
-	c(1:10,rep(3,4))
+	c(1:10, rep(3,4))
 	HTMLStop()
 }
 }

@@ -7,7 +7,10 @@
      only works on Windows). 
 }
 \usage{
-	HTML2clip(x, filename = file("clipboard", ifelse(.Platform$OS == "windows","w",stop("Writing to clipboard only supported on Windows"))), append = FALSE, ...) 
+  HTML2clip(x, filename = file("clipboard",
+    ifelse(.Platform$OS == "windows", "w",
+      stop("Writing to clipboard only supported on Windows"))),
+   append = FALSE, ...)
 }
 
 \arguments{
@@ -22,7 +25,6 @@
 	no value returned.
 }
 
-\references{}
 \author{ Eric Lecoutre}
 
 \note{ This function was contributed by Gabor Grothendieck.}

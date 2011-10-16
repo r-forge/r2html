@@ -5,7 +5,7 @@
 \description{
   Writes the code of a function to a target HTML file 
 }
-\usage{\method{HTML}{function}(x, file = get(".HTML.file"), append=TRUE,...)
+\usage{\method{HTML}{function}(x, file = get(".HTML.file"), append=TRUE, ...)
 }
 
 \arguments{
@@ -20,7 +20,6 @@
 \value{
 	no value returned.  
 }
-\references{ }
 \author{ Eric Lecoutre }
 
 \note{ For a discussion about .HTML.file default value for file argument, refer to \code{\link{HTMLStart}} }

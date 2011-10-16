@@ -8,9 +8,10 @@
   Write <br>, <li> and <hr> tags, which are often used, to an output file.
 }
 \usage{
-HTMLbr(x=1,file = get(".HTML.file"),append=TRUE)
-HTMLli(txt="",file = get(".HTML.file"),append=TRUE)
-HTMLhr(file = get(".HTML.file"), Width = "100\%", Size = "1",CSSclass=NULL,append=TRUE)
+HTMLbr(x=1, file = get(".HTML.file"), append=TRUE)
+HTMLli(txt="", file = get(".HTML.file"), append=TRUE)
+HTMLhr(file = get(".HTML.file"), Width = "100\%", Size = "1",
+  CSSclass=NULL, append=TRUE)
 }
 
 \arguments{
@@ -27,12 +28,10 @@ HTMLhr(file = get(".HTML.file"), Width = "100\%", Size = "1",CSSclass=NULL,appen
 	no value returned.
 }
 
-\references{}
 \author{ Eric Lecoutre}
 
 \note{ For a discussion about .HTML.file default value for file argument, refer to \code{\link{HTMLStart}} }
 
- 
 
 \seealso{  \code{\link{HTML}}}
 
