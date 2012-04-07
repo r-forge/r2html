@@ -7,7 +7,7 @@
 }
 
 \usage{
-  HTML.cormat(x, file = get(".HTML.file"), digits = 2, append = TRUE,
+  \method{HTML}{cormat}(x, file = get(".HTML.file"), digits = 2, append = TRUE,
     align = "center", caption = "", captionalign = "bottom",
     classcaption = "captiondataframe", classtable = "cormat",
     useCSS = TRUE, ...)
@@ -39,9 +39,9 @@
 }
 
 \author{ Eric Lecoutre }
-\note{ 
+\note{
 \dQuote{Highlighting traffic} is a simple technique which allows to have a visual representation of data. It is particularly well suited for correlation matrices in order to have at a glance the underlying (linear) structure of data.
-If your output doesn't rely on CSS styles, you should use \code{useCSS=FALSE} option, whihc hard codes grey levels for correlations. 
+If your output doesn't rely on CSS styles, you should use \code{useCSS=FALSE} option, whihc hard codes grey levels for correlations.
 
 For CSS uses, you can (re)define colours and other attributes for correlations in \code{seq(0,1,length=11)}-defined intervals. Some definitions could be equivalent, not showing any difference. You can, by example, redefine CSS so that only correlations greater than 0.9 are showned, and lower the size of cells, which could be usefull for veryu big datasets.
 }
@@ -59,7 +59,7 @@ For CSS uses, you can (re)define colours and other attributes for correlations i
 
 	# File is generated, you can call the browser:
 	\dontrun{browseURL(tmpfic)}
-	
+
 }
 \keyword{ IO }
 \keyword{ multivariate}
